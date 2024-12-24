@@ -6,74 +6,95 @@
     <title>Sohan PM - Research Scholar in Physical Oceanography</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #0077be, #00b3e6, #00cc99);
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        header, footer, nav {
+
+        header {
+            background: linear-gradient(90deg, #0055a5, #003366);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            margin-top: 100px;
+            background-color: #0055a5;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 70px;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            padding: 8px 12px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: #0055a5;
+            border-radius: 4px;
+        }
+
+        .container {
+            margin-top: 180px;
+            padding: 20px;
+        }
+
+        footer {
             background-color: #003366;
             color: white;
             text-align: center;
             padding: 10px 0;
             position: fixed;
-            width: 100%;
-            z-index: 1000;
-        }
-        header {
-            top: 0;
-        }
-        nav {
-            top: 134px; /* Adjust based on header height */
-            background-color: #0055a5;
-        }
-        footer {
             bottom: 0;
+            width: 100%;
         }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            display: inline-block;
-        }
-        nav a:hover {
-            background-color: #003366;
-        }
-        .container {
-            flex: 1;
-            overflow-y: auto;
-            padding: 20px 10%;
-            margin-top: 184px; /* Adjust based on header and nav height */
-            margin-bottom: 50px; /* Adjust based on footer height */
-        }
-        .about-section, #portfolio, #projects, #memberships {
-            padding: 20px 0;
-            border-bottom: 1px solid #cccccc;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            margin-right: 20px;
-            border: 2px solid #0055a5;
-            float: left;
-        }
-        .about-text {
-            margin-left: 180px; /* Adjust based on profile pic width and margin */
-        }
-        .social-icons a {
+
+        footer .social-icons a {
             color: white;
             text-decoration: none;
             margin: 0 10px;
-            display: inline-block;
+            font-size: 1.2rem;
         }
-        .social-icons a:hover {
+
+        footer .social-icons a:hover {
             color: #ffdd00;
         }
-        .social-icons a i {
-            font-size: 20px;
+
+        footer p {
+            margin: 10px 0 0;
+            font-size: 0.9rem;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -94,71 +115,21 @@
 
     <div class="container">
         <section class="about-section" id="about">
-            <img src="sohan_pm.png" alt="Sohan PM" class="profile-pic">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>Hi, I'm Sohan PM. I'm currently working as a research scholar in physical oceanography at the CSIR-National Institute of Oceanography, Goa. My research focuses on understanding the physical processes of the ocean and their impact on the environment. I have a keen interest in data analysis, utilizing various tools and techniques to derive meaningful insights from oceanographic data.</p>
-            </div>
-        </section>
-
-        <section id="memberships">
-            <h2>Memberships</h2>
-            <ul>
-                <li>Indian Meteorological Society : LM-3899</li>
-                <li>Ocean Society of India : LM-684</li>
-                <li>Mangrove Society of India : LM-XXX</li>
-                </ul>
-        </section>
-
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <p>Here are some of the projects I have worked on:</p>
-            <ul>
-                <li><strong>Project 1:</strong> Analysis of ocean current patterns in the Arabian Sea using Python and xarray.</li>
-                <li><strong>Project 2:</strong> Simulation of storm surge events using the WRF model.</li>
-                <li><strong>Project 3:</strong> Visualization of wave height data from the WW3 model.</li>
-                <li><strong>Project 4:</strong> Development of an IDL script for processing satellite imagery of sea surface temperature.</li>
-            </ul>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Postgraduate Dissertation Central University of Rajasthan, Rajasthan (Jan - May, 2020)</strong>
-                    <p>Focus: “Sensitivity Study Of Cumulus Parameterization In Simulating Tropical Cyclone “Bulbul” Over Bay Of Bengal Using WRF” under the Guidance of Dr. Jyanti Pal, Assistant Professor, Department of Atmospheric Science, Central University of Rajasthan, Rajasthan</p>
-                </li>
-                <li><strong>Literature review Central University of Rajasthan, Rajasthan (Jul - Dec, 2019)</strong>
-                    <p>Focus: “A review of Dust storms over the Indian region” under the Guidance of Dr. Subrat Kumar Panda, Assistant Professor, Department of Atmospheric Science, Central University of Rajasthan, Rajasthan</p>
-                </li>
-                <li><strong>Simulation of Ideal Case Central University of Rajasthan, Rajasthan (Jul - Dec, 2019)</strong>
-                    <p>Focus: “Simulated Ideal case of Tropical Cyclone” using WRF-ARW” under the Guidance of Prof. Someshwar Das, Professor and Head of Department, Department of Atmospheric Science, Central University of Rajasthan, Rajasthan</p>
-                </li>
-                <li><strong>Internship Project National Centre for Medium Range Weather Forecasting, Noida (May - Jul, 2019)</strong>
-                    <p>Focus: “Spatial Verification of Rainfall during Monsoon 2018 Over Indian Region using CRA Method under the Guidance of Dr. Anumeha Dube, Scientist-D, National Centre for Medium Range Weather Forecasting(NCMRWF), Noida</p>
-                </li>
-                <li><strong>IMD Visit Report India Meteorological Department, Jaipur (Apr - May, 2019)</strong>
-                    <p>Focus: “A Report On Jaipur Radar Operation and Observational Instruments of IMD Jaipur Visit” under the Guidance of Dr. Subrat Kumar Panda, Assistant Professor, Department of Atmospheric Science, Central University of Rajasthan, Rajasthan</p>
-                </li>
-                <li><strong>Completed Certificated Course IIRS-ISRO, Govt. Of India (Sep - Dec, 2018)</strong>
-                    <p>Focus: “Basics of Remote Sensing, Geographical Information System and Global Navigation Satellite System” Organised by Indian Institute of Remote Sensing, Indian Space Research Organisation, Department of Space, Govt. of India</p>
-                </li>
-                <li><strong>Visualization and Analysis of Meteorological Data Central University of Rajasthan, Rajasthan (Jul - Dec, 2018)</strong>
-                    <p>Focus: “Visualization of Different Atmospheric variables using OpenGrADS” under the Guidance of Dr. Subrat Kumar Panda, Assistant Professor, Department of Atmospheric Science, Central University of Rajasthan, Rajasthan</p>
-                </li>
-            </ul>
+            <h2>About Me</h2>
+            <p>Hi, I'm Sohan PM, a research scholar in physical oceanography at the CSIR-National Institute of Oceanography, Goa. My research focuses on understanding the physical processes of the ocean and their impact on the environment. I specialize in data analysis, leveraging advanced tools to extract insights from oceanographic data.</p>
         </section>
     </div>
 
     <footer>
         <div class="social-icons">
             <a href="https://facebook.com/S0HAN.PM" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com/the_desi_alpha" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>   
+            <a href="https://instagram.com/the_desi_alpha" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/S0HAN_PM" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/sohanpm" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/sohan-pm" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://orcid.org/0000-0003-3180-4792" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
         </div>
-        <p>Designed and administrated by Sohan PM.</p>
+        <p>Designed and administrated by Sohan PM</p>
     </footer>
 </body>
 </html>
