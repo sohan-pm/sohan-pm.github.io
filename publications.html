@@ -9,6 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.prod.website-files.com/5e2520252e290c852ed89624/css/arlen.webflow.shared.903668989.css" rel="stylesheet" type="text/css"/>
   <style>
+    ::selection { background-color: #003366; color: #f8f8f8; }
+    html { scroll-behavior: smooth; }
+
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
@@ -47,20 +50,105 @@
       padding: 40px 0;
     }
 
+    .navigation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .header-link-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-link {
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #333;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .header-link:hover {
+      color: #003366;
+      background-color: rgba(0, 51, 102, 0.05);
+    }
+
+    .logo-container {
+      width: 49px;
+      height: 49px;
+      background-color: #003366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
     .footer-wrap {
       margin-top: 60px;
+      background-color: #fff;
+      padding: 40px 20px;
+    }
+
+    .footer-title {
+      color: #003366;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .footer-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .footer-item {
+      color: #0055a5;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-item:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .header-link-group {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
     }
   </style>
 </head>
 
 <body>
-  <!-- Navigation Bar (copied from index.html) -->
+  <!-- Navigation Bar -->
   <nav class="navigation w-nav">
     <div class="nav-container">
       <a href="index.html" class="arlen-logo-link-animated w-nav-brand">
-        <div class="logo-container">
-          <div class="logo-text">SPM</div>
-        </div>
+        <div class="logo-container">SPM</div>
       </a>
       <div class="header-link-group">
         <a href="index.html#home" class="header-link">Home</a>
@@ -82,21 +170,28 @@
               <strong>Authors:</strong> Sohan PM, S. Neetu, V. Adithyan, Imsangla Imchen<br>
               <strong>Journal:</strong> Ocean Modelling<br>
               <strong>Year:</strong> December 2023<br>
-              <strong>DOI:</strong> <a href="https://doi.org/10.1016/j.ocemod.2023.102282">10.1016/j.ocemod.2023.102282</a>
+              <strong>DOI:</strong> <a href="https://doi.org/10.1016/j.ocemod.2023.102282" target="_blank">10.1016/j.ocemod.2023.102282</a>
           </li>
 
           <li><strong>Title:</strong> Influence of wave setup and tide-surge interaction on storm surges in the Bay of Bengal<br>
               <strong>Authors:</strong> V. Adithyan, S. Neetu, Imsangla Imchen, Sohan PM<br>
               <strong>Journal:</strong> Natural Hazards<br>
               <strong>Year:</strong> November 2024<br>
-              <strong>DOI:</strong> <a href="https://doi.org/10.1007/s11069-024-07038-6">10.1007/s11069-024-07038-6</a>
+              <strong>DOI:</strong> <a href="https://doi.org/10.1007/s11069-024-07038-6" target="_blank">10.1007/s11069-024-07038-6</a>
           </li>
 
-          <li><strong>Title:</strong> Your Third Article Title<br>
-              <strong>Authors:</strong> Author X, Author Y<br>
-              <strong>Journal:</strong> Another Journal Name<br>
-              <strong>Year:</strong> 2025<br>
-              <strong>DOI:</strong> <a href="https://doi.org/your-third-article-doi">Your Third Article DOI</a>
+          <li><strong>Title:</strong> Estimation of ocean mixed-layer depth using machine learning techniques<br>
+              <strong>Authors:</strong> Imsangla Imchen, S. Neetu, Suhani Rajmohan, V. Adithyan, Sohan PM<br>
+              <strong>Journal:</strong> Ocean Dynamics<br>
+              <strong>Year:</strong> June 2025<br>
+              <strong>DOI:</strong> <a href="https://link.springer.com/article/10.1007/s10236-025-01708-0" target="_blank">s10236-025-01708-0</a>
+          </li>
+
+          <li><strong>Title:</strong> Early career ocean professionals’ declaration on ocean negative carbon emissions for our ocean and future<br>
+              <strong>Authors:</strong> Shenghui Li, Charles I. Addey,......, Sohan PM<br>
+              <strong>Journal:</strong> The Innovation<br>
+              <strong>Year:</strong> June 2025<br>
+              <strong>DOI:</strong> <a href="https://doi.org/10.1016/j.xinn.2025.101007" target="_blank">j.xinn.2025.101007</a>
           </li>
         </ul>
       </div>
@@ -106,26 +201,25 @@
       <div class="standard-container">
         <h2>Training Programmes</h2>
         <ul>
-          <li><strong>Feb 27-29, 2024:</strong> Presented a Paper in World Ocean Science Congress (WOSC-2024)...</li>
-          <li><strong>Sep 28-30, 2023:</strong> Presented a Poster in Samudra-Manthan-2023...</li>
-          <li><strong>Mar 15-19, 2021:</strong> Online Training “Visualization of Marine Met Data (FERRET)”...</li>
-          <li><strong>Oct 12-14, 2020:</strong> Online Training “Understanding Sea Level: Data analysis...”</li>
-          <!-- Truncated for brevity; include all remaining items as in your original file -->
+          <li><strong>Feb 27–29, 2024:</strong> Presented a Paper in World Ocean Science Congress (WOSC-2024)...</li>
+          <li><strong>Sep 28–30, 2023:</strong> Presented a Poster in Samudra-Manthan-2023...</li>
+          <li><strong>Mar 15–19, 2021:</strong> Online Training “Visualization of Marine Met Data (FERRET)”...</li>
+          <li><strong>Oct 12–14, 2020:</strong> Online Training “Understanding Sea Level: Data analysis...”</li>
+          <!-- Add additional items here -->
         </ul>
       </div>
     </section>
   </main>
 
-  <!-- Footer (copied and styled like index.html) -->
+  <!-- Footer -->
   <footer class="footer-wrap div-block-3">
     <div class="standard-container w-container">
       <div class="footer-top-divider">
         <a href="index.html" class="arlen-logo-link logo-footer w-nav-brand">
-          <div style="width: 49px; height: 49px; background-color: #003366; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 5px;">SPM</div>
+          <div class="logo-container">SPM</div>
         </a>
         <div class="footer-divider"></div>
       </div>
-      <div class="footer-dots"></div>
       <a href="index.html" class="link-block w-inline-block">
         <h2 class="footer-title">Sohan PM</h2>
       </a>
@@ -140,4 +234,3 @@
   </footer>
 </body>
 </html>
-
