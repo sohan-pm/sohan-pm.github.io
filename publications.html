@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- 1. Meta and Title -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Publications - Sohan PM</title>
+
+  <!-- 2. Fonts and External Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.prod.website-files.com/5e2520252e290c852ed89624/css/arlen.webflow.shared.903668989.css" rel="stylesheet" type="text/css"/>
+
+  <!-- 3. Internal Styles -->
   <style>
     ::selection { background-color: #003366; color: #f8f8f8; }
     html { scroll-behavior: smooth; }
@@ -27,14 +32,26 @@
 
     h2 {
       color: #003366;
+      margin-bottom: 24px;
     }
 
-    ul {
-      padding-left: 20px;
+    /* Modified publication list styles */
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-left: 0;
     }
 
-    li {
-      margin-bottom: 20px;
+    .pub-item {
+      background-color: #fff;
+      padding: 20px 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .pub-item p {
+      margin: 8px 0;
     }
 
     a {
@@ -144,8 +161,8 @@
 </head>
 
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navigation w-nav">
+  <!-- 4. Navigation Bar -->
+  <nav class="navigation">
     <div class="nav-container">
       <a href="index.html" class="arlen-logo-link-animated w-nav-brand">
         <div class="logo-container">SPM</div>
@@ -161,63 +178,62 @@
     </div>
   </nav>
 
+  <!-- 5. Main Content -->
   <main>
+    <!-- 5.1 Publications Section (No list markers) -->
     <section class="section-style">
       <div class="standard-container">
         <h2>Publications</h2>
-        <ul>
-          <li><strong>Title:</strong> Contribution of tropical cyclone induced waves to the mean and extreme wave climatology in the Bay of Bengal<br>
-              <strong>Authors:</strong> Sohan PM, S. Neetu, V. Adithyan, Imsangla Imchen<br>
-              <strong>Journal:</strong> Ocean Modelling<br>
-              <strong>Year:</strong> December 2023<br>
-              <strong>DOI:</strong> <a href="https://doi.org/10.1016/j.ocemod.2023.102282" target="_blank">10.1016/j.ocemod.2023.102282</a>
-          </li>
+        <div class="pub-list">
+          <div class="pub-item">
+            <p><strong>1. Title:</strong> Contribution of tropical cyclone induced waves to the mean and extreme wave climatology in the Bay of Bengal</p>
+            <p><strong>Authors:</strong> Sohan PM, S. Neetu, V. Adithyan, Imsangla Imchen</p>
+            <p><strong>Journal:</strong> Ocean Modelling, <strong>Year:</strong> Dec 2023</p>
+            <p><strong>DOI:</strong> <a href="https://doi.org/10.1016/j.ocemod.2023.102282" target="_blank">10.1016/j.ocemod.2023.102282</a></p>
+          </div>
 
-          <li><strong>Title:</strong> Influence of wave setup and tide-surge interaction on storm surges in the Bay of Bengal<br>
-              <strong>Authors:</strong> V. Adithyan, S. Neetu, Imsangla Imchen, Sohan PM<br>
-              <strong>Journal:</strong> Natural Hazards<br>
-              <strong>Year:</strong> November 2024<br>
-              <strong>DOI:</strong> <a href="https://doi.org/10.1007/s11069-024-07038-6" target="_blank">10.1007/s11069-024-07038-6</a>
-          </li>
+          <div class="pub-item">
+            <p><strong>2. Title:</strong> Influence of wave setup and tide-surge interaction on storm surges in the Bay of Bengal</p>
+            <p><strong>Authors:</strong> V. Adithyan, S. Neetu, Imsangla Imchen, Sohan PM</p>
+            <p><strong>Journal:</strong> Natural Hazards, <strong>Year:</strong> Nov 2024</p>
+            <p><strong>DOI:</strong> <a href="https://doi.org/10.1007/s11069-024-07038-6" target="_blank">10.1007/s11069-024-07038-6</a></p>
+          </div>
 
-          <li><strong>Title:</strong> Estimation of ocean mixed-layer depth using machine learning techniques<br>
-              <strong>Authors:</strong> Imsangla Imchen, S. Neetu, Suhani Rajmohan, V. Adithyan, Sohan PM<br>
-              <strong>Journal:</strong> Ocean Dynamics<br>
-              <strong>Year:</strong> June 2025<br>
-              <strong>DOI:</strong> <a href="https://link.springer.com/article/10.1007/s10236-025-01708-0" target="_blank">s10236-025-01708-0</a>
-          </li>
+          <div class="pub-item">
+            <p><strong>3. Title:</strong> Estimation of ocean mixed-layer depth using machine learning techniques</p>
+            <p><strong>Authors:</strong> Imsangla Imchen, S. Neetu, Suhani Rajmohan, V. Adithyan, Sohan PM</p>
+            <p><strong>Journal:</strong> Ocean Dynamics, <strong>Year:</strong> June 2025</p>
+            <p><strong>DOI:</strong> <a href="https://link.springer.com/article/10.1007/s10236-025-01708-0" target="_blank">10.1007/s10236-025-01708-0</a></p>
+          </div>
 
-          <li><strong>Title:</strong> Early career ocean professionals’ declaration on ocean negative carbon emissions for our ocean and future<br>
-              <strong>Authors:</strong> Shenghui Li, Charles I. Addey,......, Sohan PM<br>
-              <strong>Journal:</strong> The Innovation<br>
-              <strong>Year:</strong> June 2025<br>
-              <strong>DOI:</strong> <a href="https://doi.org/10.1016/j.xinn.2025.101007" target="_blank">j.xinn.2025.101007</a>
-          </li>
-        </ul>
+          <div class="pub-item">
+            <p><strong>4. Title:</strong> Early career ocean professionals’ declaration on ocean negative carbon emissions for our ocean and future</p>
+            <p><strong>Authors:</strong> Shenghui Li, Charles I. Addey, ..., Sohan PM</p>
+            <p><strong>Journal:</strong> The Innovation, <strong>Year:</strong> June 2025</p>
+            <p><strong>DOI:</strong> <a href="https://doi.org/10.1016/j.xinn.2025.101007" target="_blank">10.1016/j.xinn.2025.101007</a></p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- 5.2 Training Programmes Section -->
     <section class="section-style">
       <div class="standard-container">
         <h2>Training Programmes</h2>
         <ul>
-          <li><strong>Feb 27–29, 2024:</strong> Presented a Paper in World Ocean Science Congress (WOSC-2024)...</li>
-          <li><strong>Sep 28–30, 2023:</strong> Presented a Poster in Samudra-Manthan-2023...</li>
-          <li><strong>Mar 15–19, 2021:</strong> Online Training “Visualization of Marine Met Data (FERRET)”...</li>
-          <li><strong>Oct 12–14, 2020:</strong> Online Training “Understanding Sea Level: Data analysis...”</li>
-          <!-- Add additional items here -->
+          <li><strong>Feb 27–29, 2024:</strong> Presented paper at World Ocean Science Congress (WOSC-2024)</li>
+          <li><strong>Sep 28–30, 2023:</strong> Poster presentation at Samudra-Manthan-2023</li>
+          <li><strong>Mar 15–19, 2021:</strong> Online Training on “Visualization of Marine Met Data (FERRET)”</li>
+          <li><strong>Oct 12–14, 2020:</strong> Online Training on “Understanding Sea Level: Data analysis”</li>
         </ul>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer-wrap div-block-3">
-    <div class="standard-container w-container">
+  <!-- 6. Footer -->
+  <footer class="footer-wrap">
+    <div class="standard-container">
       <div class="footer-top-divider">
-        <a href="index.html" class="arlen-logo-link logo-footer w-nav-brand">
-          <div class="logo-container">SPM</div>
-        </a>
         <div class="footer-divider"></div>
       </div>
       <a href="index.html" class="link-block w-inline-block">
